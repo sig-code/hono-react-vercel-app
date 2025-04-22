@@ -12,10 +12,5 @@
       "destination": "/api/index.js"
     }
   ],
-  "outputDirectory": "apps/web/dist",
-  "functions": {
-    "api/index.js": {
-      "includeFiles": "apps/api/dist/**"
-    }
-  }
+  "outputDirectory": "apps/web/dist"
 }

@@ -1,0 +1,16 @@
+{
+  "name": "hono-react-vercel-app",
+  "private": true,
+  "scripts": {
+    "build": "pnpm --filter=web build && pnpm --filter=api build",
+    "dev": "pnpm --parallel --filter=web --filter=api dev",
+    "lint": "pnpm --parallel --filter=web --filter=api lint"
+  },
+  "devDependencies": {
+    "turbo": "^2.5.0"
+  },
+  "packageManager": "pnpm@10.7.1",
+  "engines": {
+    "node": ">=20"
+  }
+}

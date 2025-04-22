@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "cd apps/web && pnpm build",
+  "buildCommand": "cd apps/web && pnpm build && cd ../../apps/api && pnpm build && mkdir -p ../web/dist/api && cp -r dist/* ../web/dist/api/",
   "installCommand": "pnpm install --no-frozen-lockfile",
   "env": {
     "NODEJS_HELPERS": "0",

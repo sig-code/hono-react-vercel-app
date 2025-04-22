@@ -2,7 +2,7 @@
   "name": "hono-react-vercel-app",
   "private": true,
   "scripts": {
-    "build": "pnpm --filter=web build && pnpm --filter=api build && mkdir -p apps/web/dist/api && cp -r apps/api/dist/* apps/web/dist/api/",
+    "build": "cd apps/web && pnpm build && cd ../../apps/api && pnpm build && mkdir -p ../web/dist/api && cp -r dist/* ../web/dist/api/",
     "dev": "pnpm --parallel --filter=web --filter=api dev",
     "lint": "pnpm --parallel --filter=web --filter=api lint"
   },

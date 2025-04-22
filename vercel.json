@@ -1,7 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "cd apps/web && pnpm build && cd ../../apps/api && pnpm build && mkdir -p ../../api && cp -r dist/* ../../api/",
-  "outputDirectory": "apps/web/dist",
+  "buildCommand": "pnpm build",
   "installCommand": "pnpm install --no-frozen-lockfile",
   "env": {
     "NODEJS_HELPERS": "0",
@@ -12,5 +11,11 @@
       "source": "/api/(.*)",
       "destination": "/api/index.js"
     }
-  ]
+  ],
+  "outputDirectory": "apps/web/dist",
+  "functions": {
+    "api/index.js": {
+      "includeFiles": "apps/api/dist/**"
+    }
+  }
 }

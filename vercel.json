@@ -1,16 +1,10 @@
 {
   "version": 2,
-  "buildCommand": "cd apps/web && pnpm build && cd ../../apps/api && pnpm build && mkdir -p ../web/dist/api && cp -r dist/* ../web/dist/api/",
+  "buildCommand": "cd apps/web && pnpm build",
   "installCommand": "pnpm install --no-frozen-lockfile",
   "env": {
     "NODEJS_HELPERS": "0",
     "NODE_ENV": "production"
   },
-  "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": "/api/index.js"
-    }
-  ],
   "outputDirectory": "apps/web/dist"
 }
